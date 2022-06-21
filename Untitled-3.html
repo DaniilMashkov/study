@@ -1,0 +1,32 @@
+<html>
+    <script>
+let massiv = [];
+let i = +prompt("Сколько чисел будем вводить? : ", 8);
+        for (let count = 0; i>count; count++) {
+            let num = +prompt("Введите элемент последовательности: ", count+1 );
+            massiv.push(num);
+            }
+            let min = Math.min (...massiv);
+            let max = Math.max (...massiv);
+            let indexMin = massiv.indexOf(min);
+            massiv.splice(indexMin, 1);
+            let indexMax = massiv.indexOf(max);
+            massiv.splice(indexMax, 1);
+            
+            let count1 = 1;
+            for (let el of massiv){
+                count1 = count1*el; 
+                }
+    alert ("Количество элементов между минимальным и максимальным: " + massiv.length + "\n" + "И их произведение: " + count1)
+        
+    
+        
+                
+        
+        
+
+
+
+
+    </script>
+</html>

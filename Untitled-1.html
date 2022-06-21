@@ -1,0 +1,43 @@
+<html>
+    <script>
+       let massiv0 = []; 
+       let count = 0;
+       let i = +prompt("Сколько чисел будем вводить? " + "\n" + "*Либо введите любой другой символ для вывода значения `по умолчанию`");
+            if (Number.isNaN(i)||i<1) {
+                let massiv0 = [13, 80, 0, 0, 871, 96, -64, 0, 89];
+                let massiv = [];
+                for (; massiv0.length>count; count+=1 )
+                    if (massiv0[count]==0) {
+                        massiv.push(count+1);
+                    }  
+                    alert ('номера 0 значений: ' + massiv + '\n' + "в массиве: " + massiv0);
+            }else{
+      
+                do {
+                    count ++;
+                    let num = +prompt("Задайте элемент массива: ");
+                    if (num == 0) {                        
+                        massiv0.push(count);
+                        }
+                    } while (i!=count); 
+                    alert ("номера 0 элементов: " + massiv0 );
+               
+       
+                }
+            
+
+            
+               
+                      
+
+        
+            
+            
+
+        
+        
+        
+        
+        
+    </script>
+</html>

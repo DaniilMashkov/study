@@ -1,0 +1,57 @@
+<html>
+    <script>
+        //Ввод значений
+        let lenght_M = +prompt ("Задайте длину строки М ", 3);
+        let lenght_N = +prompt ("Задайте длину строки N ", 3);
+        let lenght_L = +prompt ("Задайте длину строки L ", 3);
+        let ArrM = [];
+        let ArrN = [];
+        let ArrL = [];
+        let ArrO = []; // для матрицы Е
+        let ArrP= []; // для матрицы Е
+        let matrix_C = [[ArrM],[ArrN]];
+        let matrix_D = [[ArrM],[ArrL]];
+        let matrix_E = [[ArrO],[ArrP]];
+
+        for (let i = 0; i<lenght_M; i++) {
+            let M = +prompt ("Значения строки M", i+1);
+            ArrM.push(M);   
+        }
+        for (let i = 0; i<lenght_N; i++) {
+                let N = +prompt ("Значения строки N ", i+4 );
+                ArrN.push(N);
+            }
+        for (let i = 0; i<lenght_L; i++) {
+                let L = +prompt ("Значения сроки L ", i+4 );
+                ArrL.push(L);
+            }
+
+        // Перебор массивов и вычисления
+        
+        let sumM = 0;
+            for (let i = 0; i<ArrM.length; i++){
+                sumM+=ArrM[i]
+            }
+        let sumN = 0;
+            for (let i = 0; i<ArrN.length; i++){
+                sumN+=ArrN[i]
+            }
+        for (let M of ArrM){
+            let Mc = M - sumM;
+            ArrO.push (Mc); 
+        }
+        for (let L of ArrL){
+            let Lc = L - sumN;
+            ArrP.push(Lc);
+        }
+    // Вывод 
+
+        console.log ("Матрица С: " + "\n" + [ArrM] + "\n" + [ArrN] + "\n" + "\n" + "Матрица D: "
+         + "\n" + [ArrM] + "\n" + [ArrL] + "\n" + "\n" + "Матрица E: " + "\n" + [ArrO] + "\n" + [ArrP] );
+
+        document.write ("Матрица Е: " + matrix_E);
+        matrix_E.sort();
+        document.write ('<br>' + "Матрица Е в порядке позрастания: " + matrix_E);
+ 
+    </script>
+</html>

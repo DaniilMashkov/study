@@ -1,0 +1,33 @@
+<html>
+    <script>
+        let massiv = [];
+        let y = +prompt("Сколько чисел будем вводить?  ");
+            for (let count=0; count<y; count++) {
+                let num = +prompt ("Введите число: ");
+                massiv.push(num);     
+            }
+            for (let i=2; i < massiv.length; i++) {
+                let x = massiv[i];
+                let L = 1;
+                let R = i-1;
+                
+                while (L<R) {
+                   let mid = Math.floor(R+L)/2;
+                    if (x<massiv[mid]) {
+                        R=mid-1;
+                    } else {
+                        L = mid+1;
+                    }
+                }
+                if (L>R) {
+                    for (let j = i-1; j>=L; j--) {
+                        massiv[j+1] = massiv[j];
+                    }
+                    massiv[L] = x;
+                }   
+            }      
+                document.write ("Положительные цифры заданного массива в порядке убывания: " + massiv)
+
+                // И это не работает
+    </script>
+</html>

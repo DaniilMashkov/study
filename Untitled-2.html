@@ -1,0 +1,44 @@
+<html>
+    <script>
+
+    let massiv = []; 
+    let massiv2 = [];  
+    let i = +prompt("Сколько чисел будем вводить? " + "\n" + "*Либо введите любой другой символ для вывода значения `по умолчанию`");
+            if (Number.isNaN(i)||i<1) {
+              let massiv = [1, 2, 8, 84, 51, 96, 1079]
+                for (let two of massiv)
+                if (two%2 == 0) {
+                    massiv2.push(two);   
+                } 
+              alert ("Массив по умолчанию: " + massiv + " чётные значения в нём: "  + "\n " + massiv2)
+                
+            }else{
+                for (let count = 0; i>count; count++) {
+                    let num = +prompt ("Введите значение массива: ");
+                    massiv.push(num);
+                    }     
+                for (let two of massiv)
+                    if (two%2 == 0) {
+                       massiv2.push (two);
+                    } 
+                        if (massiv2==0) {
+                            alert ("Чётных чисел в массиве " + massiv + " нет")
+                        }else if (massiv2!=0) {
+                            alert ("Задан массив " + massiv + " ; чётные числа в нём: " + massiv2);
+                        }  
+                }
+                    
+                    
+                         
+                    
+                        
+                        
+                    
+                    
+
+    
+    
+          
+
+    </script>
+</html>
